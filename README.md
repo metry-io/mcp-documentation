@@ -1,8 +1,21 @@
 # Metry connector for Claude
 
-Metry is a Nordic energy data platform used by real estate owners, property managers, and energy managers to collect and normalize metered consumption data across a portfolio.
+## What is MCP?
 
-The Metry connector gives Claude read access to your organization's meters and consumption data so you can ask questions, generate reports, and analyze energy use in plain language.
+The Model Context Protocol (MCP) is an open standard developed by Anthropic that provides a standardized way for AI applications to communicate with external systems. You can think of MCP as a universal connector that allows AI assistants to securely access and interact with various resources such as databases, APIs, and other external platforms.
+
+
+## About Metry
+
+Metry is an energy data platform used by real estate owners, property managers, and energy managers to collect and normalize metered consumption data across a portfolio.
+
+Metry's MCP server acts as a bridge between your AI tools and Metry's energy data platform. Once you connect the MCP server to your AI tool, you can use the prompt interface to initiate actions using the tools made available by the Metry MCP server. You can ask questions, generate reports, and analyze energy use in plain language.
+
+## What you need before you connecting
+
+- A Metry account with access to at least one organization.
+- The "Properties and Buildings" plan to browse your organization's property and building structure. All other features work on any plan.
+- A code editor, CLI or application that supports MCP servers.
 
 ## What you can do
 
@@ -37,3 +50,20 @@ The connector reads data only. It does not create, update, or delete anything in
 ## How to connect
 
 Sign in with your Metry credentials when prompted. The connector uses OAuth and requires no manual token setup.
+
+### Adding it to an MCP client
+
+For web or desktop applications, use `https://mcp.metry.io` as the server URL when adding a custom connector.
+
+For clients configured via JSON, point at the server URL. The server advertises its authorization server through Protected Resource Metadata, so a spec-compliant client discovers the OAuth flow automatically after the first 401.
+
+```json
+{
+    "mcpServers": {
+        "metry": {
+            "type": "http",
+            "url": "https://mcp.metry.io"
+        }
+    }
+}
+```
