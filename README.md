@@ -69,3 +69,7 @@ For clients configured via JSON, point at the server URL. The server advertises 
     }
 }
 ```
+
+## Questions and feedback
+
+For questions or feedback, reach us at [feedback@metry.io](mailto:feedback@metry.io).
