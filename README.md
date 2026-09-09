@@ -1,4 +1,6 @@
-# Metry connector for Claude
+![Metry MCP](header_mcp.png)
+
+# AI Ready data with Metry MCP
 
 ## What is MCP?
 
