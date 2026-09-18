@@ -13,7 +13,7 @@ Metry is an energy data platform used by real estate owners, property managers, 
 
 Metry's MCP server acts as a bridge between your AI tools and Metry's energy data platform. Once you connect the MCP server to your AI tool, you can use the prompt interface to initiate actions using the tools made available by the Metry MCP server. You can ask questions, generate reports, and analyze energy use in plain language.
 
-## What you need before you connecting
+## What you need before connecting
 
 - A Metry account with access to at least one organization.
 - The "Properties and Buildings" plan to browse your organization's property and building structure. All other features work on any plan.
@@ -57,7 +57,9 @@ Sign in with your Metry credentials when prompted. The connector uses OAuth and 
 
 For web or desktop applications, use `https://mcp.metry.io` as the server URL when adding a custom connector.
 
-For clients configured via JSON, point at the server URL. The server advertises its authorization server through Protected Resource Metadata, so a spec-compliant client discovers the OAuth flow automatically after the first 401.
+For clients configured via JSON, point at the server URL `https://mcp.metry.io`.
+
+Config file json:
 
 ```json
 {
@@ -72,4 +74,4 @@ For clients configured via JSON, point at the server URL. The server advertises 
 
 ## Questions and feedback
 
-For questions or feedback, reach us at [feedback@metry.io](mailto:feedback@metry.io).
+See [CONTRIBUTING](CONTRIBUTING.md) for how to report errors, suggest changes or submit general feedback.
